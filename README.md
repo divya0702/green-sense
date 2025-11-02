@@ -85,7 +85,6 @@ Frontend will be available locally on port **5000** (or as configured).
 | Variable            | Description                                  |
 |----------------------|----------------------------------------------|
 | `MONGO_URI`          | MongoDB connection string                    |
-| `PATCH_IO_API_KEY`   | Patch.io API key for carbon offset purchases |
 | `PORT`               | Backend server port (default: 8080)          |
 
 ---
@@ -103,7 +102,6 @@ Frontend will be available locally on port **5000** (or as configured).
 
 - Integrates **Patch.io API** to list and purchase carbon offset projects.  
 - Tracks user contributions and displays their environmental impact.  
-- Refer to [Patch.io API Documentation](https://www.patch.io) for integration details.
 
 ---
 
@@ -126,7 +124,6 @@ Specify your license here (e.g., MIT, Apache 2.0, etc.).
 
 ```env
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/greensense
-PATCH_IO_API_KEY=sk_test_yourpatchapikey
 PORT=8080
 ```
 
