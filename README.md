@@ -16,7 +16,6 @@ Before running the project, ensure you have the following installed:
 - **Node.js** (recommended version: 18.x)  
 - **npm** (recommended version: 9.x)  
 - **MongoDB URI** (available via MongoDB Atlas or local instance)  
-- **Patch.io API key** (sign up at the [Patch.io Developer Portal](https://www.patch.io))  
 - **Git**
 
 ---
