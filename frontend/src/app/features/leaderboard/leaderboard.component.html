@@ -1,0 +1,98 @@
+<div class="leaderboard-container">
+  <header class="page-header">
+    <h1>Impact Leaderboard</h1>
+  </header>
+
+  <!-- Filter Section -->
+  <div class="leaderboard-filter-container">
+    <div class="filter-buttons">
+      <div class="time-filter">
+        <span>Time Period:</span>
+        <div class="btn-group">
+          <button 
+            (click)="selectTab('week')"
+            [ngClass]="getActiveTabClass('week')">
+            This Week
+          </button>
+          <button 
+            (click)="selectTab('month')"
+            [ngClass]="getActiveTabClass('month')">
+            This Month
+          </button>
+          <button 
+            (click)="selectTab('allTime')"
+            [ngClass]="getActiveTabClass('allTime')">
+            All Time
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaderboard List -->
+  <div class="leaderboard-content">
+    <div class="leaderboard-list" *ngIf="displayedData().length > 0; else noDataTemplate">
+      @for (user of displayedData(); track user.rank) {
+        <!-- User Card -->
+        <div class="leaderboard-item">
+          <div class="user-rank">
+            <span class="rank-number">#{{ user.rank }}</span>
+          </div>
+
+          <div class="user-avatar-section">
+            <div 
+              class="progress-ring" 
+              [style.background]="'conic-gradient(from 0deg, #4caf50 ' + user.levelProgress + '%, #e0e0e0 ' + user.levelProgress + '%)'">
+              <div class="avatar-inner">
+                <img [src]="user.avatarUrl" [alt]="user.userName" class="user-avatar">
+              </div>
+            </div>
+          </div>
+
+          <div class="user-info">
+            <h3 class="user-name">{{ user.userName }}</h3>
+            <div class="co2-saved">
+              <i class="material-icons">eco</i>
+              <span>{{ user.co2Saved }} kg CO₂ Saved</span>
+            </div>
+            <div class="trees-equivalent">
+              <span>Equivalent to {{ calculateTrees(user.co2Saved) }} trees planted</span>
+            </div>
+          </div>
+
+          <div class="user-badges">
+            @for(badge of user.badges; track badge) {
+              <div class="badge-icon">
+                @switch (badge) {
+                  @case ('leaf') { 
+                    <div [innerHTML]="svgIcons.leaf" class="icon-leaf"></div> 
+                  }
+                  @case ('recycle') { 
+                    <div [innerHTML]="svgIcons.recycle" class="icon-recycle"></div> 
+                  }
+                  @case ('bolt') { 
+                    <div [innerHTML]="svgIcons.bolt" class="icon-bolt"></div> 
+                  }
+                  @case ('commute') { 
+                    <div [innerHTML]="svgIcons.commute" class="icon-commute"></div> 
+                  }
+                }
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <ng-template #noDataTemplate>
+      <div class="no-data">
+        <div class="empty-state">
+          <i class="material-icons">emoji_events</i>
+          <h3>No leaderboard data</h3>
+          <p>No data available for this time period.</p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
+

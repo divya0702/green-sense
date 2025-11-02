@@ -17,6 +17,7 @@ export class NavbarComponent {
     { path: '/dashboard', label: 'Dashboard', icon: 'dashboard' },
     { path: '/carbon-footprint', label: 'Carbon Footprint', icon: 'eco' },
     { path: '/goals', label: 'My Goals', icon: 'track_changes' },
+    { path: '/leaderboard', label: 'Leaderboard', icon: 'emoji_events' },
     { label: 'Logout', icon: 'logout', isAction: true } 
   ];
   constructor(private dialog: MatDialog, private router: Router) {}

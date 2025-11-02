@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
 import { CarbonFootprintComponent } from './features/carbon-footprint/carbon-footprint.component';
 import { GoalTrackerComponent } from './features/goal-tracker/goal-tracker.component';
+import { LeaderboardComponent } from './features/leaderboard/leaderboard.component';
 import { AuthGuard } from './auth.guard';
 import { LandingComponent } from './landing/landing.component';
 
@@ -11,6 +12,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardHomeComponent, canActivate: [AuthGuard] },
   { path: 'carbon-footprint', component: CarbonFootprintComponent,canActivate: [AuthGuard] },
   { path: 'goals', component: GoalTrackerComponent, canActivate: [AuthGuard] },
+  { path: 'leaderboard', component: LeaderboardComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '' }
 ];
 

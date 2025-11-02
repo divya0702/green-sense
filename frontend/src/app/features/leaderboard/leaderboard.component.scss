@@ -1,0 +1,289 @@
+/* Root variables for easy theme control */
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #66bb6a;
+  --accent-color: #c8e6c9;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+.leaderboard-container {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light-gray);
+  color: var(--text-color);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.leaderboard-filter-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #007b5e !important;
+  color: #ffffff !important;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.time-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background var(--transition-speed);
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: white !important;
+  color: #007b5e !important;
+  border: 1px solid #007b5e !important;
+}
+
+.btn-outline-primary {
+  border: 1px solid white !important;
+  color: white !important;
+  background: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.active-tab {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.3) !important;
+}
+
+.leaderboard-content {
+  padding: 20px;
+}
+
+.leaderboard-list {
+  display: grid;
+  gap: 20px;
+}
+
+.leaderboard-item {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.leaderboard-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.user-rank {
+  min-width: 60px;
+  text-align: center;
+}
+
+.rank-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.user-avatar-section {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.progress-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.avatar-inner {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.co2-saved {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.co2-saved i {
+  font-size: 18px;
+}
+
+.trees-equivalent {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.user-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.badge-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--light-gray);
+  padding: 4px;
+}
+
+.badge-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-leaf {
+  color: #4caf50;
+}
+
+.icon-recycle {
+  color: #2196f3;
+}
+
+.icon-bolt {
+  color: #ff9800;
+}
+
+.icon-commute {
+  color: #9c27b0;
+}
+
+.no-data {
+  padding: 40px 20px;
+}
+
+.empty-state {
+  text-align: center;
+  color: gray;
+}
+
+.empty-state i {
+  font-size: 64px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  margin: 16px 0 8px 0;
+  color: #666;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #999;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .leaderboard-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .user-info {
+    text-align: center;
+  }
+
+  .user-badges {
+    justify-content: center;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .time-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-group {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
