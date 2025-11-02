@@ -37,7 +37,6 @@ Before running the project, ensure you have the following installed:
 3. Create a `.env` file and add your configuration:
    ```env
    MONGO_URI=your_mongodb_connection_string
-   PATCH_IO_API_KEY=your_patch_io_api_key
    PORT=8080
    ```
 
