@@ -89,7 +89,6 @@ import {
   ɵɵtemplate,
   ɵɵviewQuery
 } from "./chunk-FUF4CDAW.js";
-import "./chunk-PEBH6BBU.js";
 import {
   animationFrameScheduler,
   asapScheduler,
@@ -98,6 +97,7 @@ import {
   isObservable,
   merge
 } from "./chunk-WPM5VTLQ.js";
+import "./chunk-PEBH6BBU.js";
 import {
   ConnectableObservable,
   Observable,

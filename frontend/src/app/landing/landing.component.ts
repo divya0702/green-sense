@@ -19,8 +19,8 @@ export class LandingComponent {
   ];
   
   testimonials = [
-    { quote: 'Green Pulse has transformed the way I approach sustainability. The dashboard keeps me informed and motivated.', author: 'Alex J.' },
-    { quote: 'Green Pulse helped me track my Co2 emissions.', author: 'Maria S.' },
+    { quote: 'Green Sense has transformed the way I approach sustainability. The dashboard keeps me informed and motivated.', author: 'Alex J.' },
+    { quote: 'Green Sense helped me track my Co2 emissions.', author: 'Maria S.' },
   ];
   constructor(private dialog: MatDialog) {}
 
