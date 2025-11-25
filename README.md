@@ -1,7 +1,3 @@
-Here’s your **enhanced GitHub README** — rewritten to be more complete, professional, and aligned with your **Gemini + GCP-powered “Green Sense”** project (with all core + upcoming features clearly documented):
-
----
-
 # 🌿 Green Sense
 
 **AI-Powered Energy & Sustainability Intelligence**
